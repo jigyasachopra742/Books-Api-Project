@@ -11,7 +11,7 @@ function Header_file() {
 
     const searchBook = async () =>
     {
-        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=react&key=AIzaSyCWhcWwMp5Ff80kCf_IBGIgkf_dRDyArBU`+`&maxResults=40`);
+        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyCWhcWwMp5Ff80kCf_IBGIgkf_dRDyArBU`+`&maxResults=40`);
         const data = await response.json();
         console.log(data);
         setBookData(data.items);
